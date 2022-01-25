@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import shortid from 'shortid'
 import { config } from "../config/Constants";
 import { URL } from "../database/model/URL.model";
+import StatusCodes from 'http-status-codes'
 
 
 export default class URLController {
@@ -33,13 +34,12 @@ export default class URLController {
 
     public async redirect(req: Request, res: Response): Promise<void> {
         const { hash } = req.params
+        const url = await URL.findOne({ hash })
 
-        const url = {
-            originURL: "https://cloud.mongodb.com/v2/61efff45b60f5d01cbbb8b62#clusters/connect?clusterId=Cluster0",
-            hash: "4pYHB-7dM",
-            shortURL: "http://localhost:3000/4pYHB-7dM"
+        if (url.hash === hash) {
+            res.status(StatusCodes.OK).redirect(url.originURL)
+        } else {
+            res.status(StatusCodes.BAD_REQUEST).json({ message: "URL not found" })
         }
-
-        res.redirect(url.originURL)
     }
 }

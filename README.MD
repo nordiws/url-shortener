@@ -5,21 +5,11 @@ This project was created to practice building a site with Reat.js components. It
 
 ### Features
 
-- Search infos by username
-- Search repo by username
-- Search starred by username
-
-### Preview
-
-Print of the finished project.
-
-![plot](./src/assets/img/screenshot.png)
-
+- Create a short URL
 ### Libraries used
 
 - [axios](https://www.npmjs.com/package/axios)
 - [bootstrap](https://getbootstrap.com/)
-
 
 ## Cloning the project
 
@@ -36,6 +26,15 @@ For SSH link
 git clone git@github.com:nordiws/url-shortener.git
 ```
 
+## Defining environment variables
+
+Create an ".env" file in the root directory and fill it up with the variables for connecting to your mongoDB database:
+```bash
+DB_USERNAME = <the authorized username>
+DB_PASSWORD = <valid password>
+DB_NAME = <database>
+PORT = <desired port>
+```
 
 ## Running the project
 

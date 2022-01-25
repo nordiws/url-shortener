@@ -1,4 +1,4 @@
-import URLController from '../controller/URLController'
+import URLController from '../controller/URL.controller'
 import { Router } from 'express'
 
 export const router = Router()
