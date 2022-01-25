@@ -8,8 +8,12 @@ This project was created to practice building a site with Reat.js components. It
 - Create a short URL
 ### Libraries used
 
-- [axios](https://www.npmjs.com/package/axios)
-- [bootstrap](https://getbootstrap.com/)
+- [typescript](https://www.typescriptlang.org//)
+- [eslint](https://eslint.org/)
+- [express](https://expressjs.com/)
+- [mongoose](https://mongoosejs.com/)
+- [shortid](https://www.npmjs.com/package/shortid/)
+- [http-status-code](https://www.npmjs.com/package/http-status-codes)
 
 ## Cloning the project
 
